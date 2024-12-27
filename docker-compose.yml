@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:alpine
+    container_name: selection-postgres
+    environment:
+      POSTGRES_DB: selection
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - selection-network
+
+networks:
+  selection-network:
+volumes:
+  postgres_data: 

@@ -1,0 +1,25 @@
+{
+  "name": "freshspring",
+  "version": "1.0.0",
+  "scripts": {
+    "run": "mvnw.cmd spring-boot:run",
+    "clean": "mvnw.cmd clean",
+    "clean:install": "mvnw.cmd clean install",
+    "clean:verify": "mvnw.cmd clean verify",
+    "clean:cache": "mvnw.cmd dependency:purge-local-repository",
+    "clean:test": "mvnw.cmd clean test",
+    "install:dependencies": "mvnw.cmd install -DskipTests",
+    "lint": "mvnw.cmd checkstyle:check",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:ps": "docker-compose ps",
+    "docker:clean": "docker-compose down -v"
+  },
+  "devDependencies": {
+    "prettier": "^3.1.0",
+    "prettier-plugin-java": "^2.5.0"
+  }
+}

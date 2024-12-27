@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+          "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+          "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+  <property name="severity" value="warning"/>
+  <property name="fileExtensions" value="java, properties, xml"/>
+
+  <module name="TreeWalker">
+    <!-- Checks for Naming Conventions -->
+    <module name="ConstantName"/>
+    <module name="LocalFinalVariableName"/>
+    <module name="LocalVariableName"/>
+    <module name="MemberName"/>
+    <module name="MethodName"/>
+    <module name="PackageName"/>
+    <module name="ParameterName"/>
+    <module name="StaticVariableName"/>
+    <module name="TypeName"/>
+
+    <!-- Checks for imports -->
+    <module name="AvoidStarImport"/>
+    <module name="IllegalImport"/>
+    <module name="RedundantImport"/>
+    <module name="UnusedImports"/>
+
+    <!-- Checks for Size Violations -->
+    <module name="MethodLength"/>
+    <module name="ParameterNumber"/>
+
+    <!-- Checks for whitespace -->
+    <module name="EmptyForIteratorPad"/>
+    <module name="GenericWhitespace"/>
+    <module name="MethodParamPad"/>
+    <module name="NoWhitespaceAfter"/>
+    <module name="NoWhitespaceBefore"/>
+    <module name="ParenPad"/>
+    <module name="TypecastParenPad"/>
+    <module name="WhitespaceAfter"/>
+    <module name="WhitespaceAround"/>
+
+    <!-- Modifier Checks -->
+    <module name="ModifierOrder"/>
+    <module name="RedundantModifier"/>
+
+    <!-- Checks for blocks -->
+    <module name="AvoidNestedBlocks"/>
+    <module name="EmptyBlock"/>
+    <module name="LeftCurly"/>
+    <module name="NeedBraces"/>
+    <module name="RightCurly"/>
+
+    <!-- Checks for common coding problems -->
+    <module name="EmptyStatement"/>
+    <module name="EqualsHashCode"/>
+    <module name="IllegalInstantiation"/>
+    <module name="InnerAssignment"/>
+    <module name="MissingSwitchDefault"/>
+    <module name="MultipleVariableDeclarations"/>
+    <module name="SimplifyBooleanExpression"/>
+    <module name="SimplifyBooleanReturn"/>
+
+    <!-- Miscellaneous other checks -->
+    <module name="ArrayTypeStyle"/>
+    <module name="TodoComment"/>
+    <module name="UpperEll"/>
+
+    <!-- Custom Import Order -->
+    <module name="CustomImportOrder">
+      <property name="customImportOrderRules"
+          value="STATIC###STANDARD_JAVA_PACKAGE###THIRD_PARTY_PACKAGE###SPECIAL_IMPORTS"/>
+      <property name="standardPackageRegExp" value="^java\."/>
+      <property name="thirdPartyPackageRegExp" value="^org\.|^com\."
+      <property name="specialImportsRegExp" value="^lombok\.|^jakarta\."/>
+      <property name="separateLineBetweenGroups" value="true"/>
+      <property name="sortImportsInGroupAlphabetically" value="false"/>
+  </module>
+
+    <!-- Indentation -->
+    <module name="Indentation">
+      <property name="basicOffset" value="2"/>
+      <property name="braceAdjustment" value="0"/>
+      <property name="caseIndent" value="2"/>
+      <property name="throwsIndent" value="2"/>
+      <property name="lineWrappingIndentation" value="2"/>
+      <property name="arrayInitIndent" value="2"/>
+    </module>
+
+    <!-- One Top Level Class -->
+    <module name="OneTopLevelClass"/>
+
+    <!-- No Line Wrap -->
+    <module name="NoLineWrap">
+      <property name="tokens" value="PACKAGE_DEF, IMPORT, STATIC_IMPORT"/>
+    </module>
+
+    <!-- Check for Code Style -->
+    <module name="CovariantEquals"/>
+    <module name="DefaultComesLast"/>
+    <module name="FallThrough"/>
+    <module name="OverloadMethodsDeclarationOrder"/>
+  </module>
+</module>
